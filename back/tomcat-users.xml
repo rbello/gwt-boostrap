@@ -37,7 +37,7 @@
 <role rolename="manager-gui"/>
 <role rolename="manager-status"/>
 <role rolename="admin-gui"/>
-<user username="admin" password="N2I3MzIwMDAyMTM1NTE4YTFmYzEyZjUz" roles="admin-gui,standard,manager-gui,manager-status"/>
+<user username="admin" password="MzYyZjZjMWI1MDJjNDFhYmE4NmQxMTM3" roles="admin-gui,standard,manager-gui,manager-status"/>
 <!--
   <role rolename="tomcat"/>
   <role rolename="role1"/>
