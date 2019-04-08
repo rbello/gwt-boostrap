@@ -1,3 +1,4 @@
 *.backup
 database/1
 database/2
+*.war
