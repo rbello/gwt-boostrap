@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context docBase="gestion" path="/gestion"     
+        debug="0"
+        privileged="true"
+        reloadable="true">
+        <Realm className="org.apache.catalina.realm.JDBCRealm" debug="99"
+              driverName="org.postgresql.Driver"
+              connectionURL="jdbc:postgresql://163.172.229.57:5432/cim_admin" 
+              connectionName="postgres"
+              connectionPassword="aPF9yt82"
+              digest="MD5"
+				userTable="utilisateur"
+				userRoleTable="v_user_role"
+				userNameCol="login"
+				userCredCol="mot_passe"
+				roleNameCol="role"/>
+</Context>
