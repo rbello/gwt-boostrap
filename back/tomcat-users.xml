@@ -35,7 +35,9 @@
   them. You will also need to set the passwords to something appropriate.
 -->
 <role rolename="manager-gui"/>
-<user username="admin" password="ODNhNWY3YTc3YmFmMGNiYTcyYzNkNWZh" roles="manager-gui"/>
+<role rolename="manager-status"/>
+<role rolename="admin-gui"/>
+<user username="admin" password="N2I3MzIwMDAyMTM1NTE4YTFmYzEyZjUz" roles="admin-gui,standard,manager-gui,manager-status"/>
 <!--
   <role rolename="tomcat"/>
   <role rolename="role1"/>
