@@ -1,11 +1,20 @@
 {
     "Servers": {
         "1": {
-            "Name": "Minimally Defined Server",
-            "Group": "Server Group 1",
+            "Name": "CIM 3 - Database Gestion",
+            "Group": "ELABOR CIM3",
             "Port": 5432,
             "Username": "cim3",
             "Host": "cim3-data-1",
+            "SSLMode": "prefer",
+            "MaintenanceDB": "postgres"
+        },
+	"2": {
+            "Name": "CIM 3 - Database Client",
+            "Group": "ELABOR CIM3",
+            "Port": 5432,
+            "Username": "cim3",
+            "Host": "cim3-data-2",
             "SSLMode": "prefer",
             "MaintenanceDB": "postgres"
         }

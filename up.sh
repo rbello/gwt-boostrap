@@ -91,7 +91,7 @@ docker exec -it cim3-data-2 psql -U postgres -c \
  "CREATE USER ${DB2_USER} SUPERUSER PASSWORD '${DB2_PASSWORD}'; \
   GRANT ALL PRIVILEGES ON DATABASE cim_data TO ${DB2_USER};"
 docker exec cim3-data-2 psql -U postgres -l
-#docker exec cim3-data-2 pg_restore -U postgres -d cim_admin "/backups/$DB2_DATAFILE"
+docker exec cim3-data-2 pg_restore -U postgres -d cim_admin "/backups/$DB2_DATAFILE"
 
 printf "${YELLOW}Configuration des outils d'administration...${NC}\n"
 ADMIN_PWD=$(date +%s | sha256sum | base64 | head -c 32 ; echo)
@@ -125,6 +125,7 @@ docker run \
 printf "${YELLOW}L'application est lancée !${NC}\n"
 printf "  ${GREEN}Backoffice :${NC}     ${UL}http://${HOSTNAME}.ovh.net/gestion/${NC}             trust                      trustingenierie\n"
 printf "  ${GREEN}Database 1 :${NC}     ${UL}jdbc:postgresql://cim3-data-1:5432/cim_admin${NC}  ${DB1_USER}                       ${DB1_PASSWORD}\n"
+printf "  ${GREEN}Database 2 :${NC}     ${UL}jdbc:postgresql://cim3-data-2:5432/cim_data${NC}   ${DB2_USER}                       ${DB2_PASSWORD}\n"
 printf "  ${GREEN}Manager TOMCAT :${NC} ${UL}http://${HOSTNAME}.ovh.net/manager/html${NC}         admin                      ${ADMIN_PWD}\n"
 printf "  ${GREEN}Manage database:${NC} ${UL}http://${HOSTNAME}.ovh.net:81/${NC}                  dev@trustingenierie.com    MDI2OWFjZTMwM2MzMGMxOD\n"
 
