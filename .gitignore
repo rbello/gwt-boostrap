@@ -1,4 +1,7 @@
 *.backup
-database/1
-database/2
+data/
+node-back/tmp/
+
 *.war
+*.war.copy
+*.war.copy2
